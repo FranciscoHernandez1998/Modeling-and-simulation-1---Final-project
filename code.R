@@ -23,4 +23,13 @@ package_list <- c(
   48, 76,
   42, 2
 )
-airline_company_genetic_algorithm(max_weight, package_list)
+airline_company_genetic_algorithm(max_weight, 
+                                  package_list, 
+                                  N = 500, 
+                                  n = 100)
+airline_company_simulated_annealing(max_weight, 
+                                    package_list, 
+                                    N = 500, 
+                                    n = 10, 
+                                    temp = 100, 
+                                    alpha = 0.9)

@@ -87,13 +87,10 @@ selection <- function(population,K){
   return(rbind(player_1,player_2))
 }
 
-airline_company_genetic_algorithm <- function(max_weight, package_list) {
+airline_company_genetic_algorithm <- function(max_weight, package_list, N, n) {
   weights_bids <- matrix(package_list, ncol = 2, byrow = TRUE) 
   colnames(weights_bids) <- c('weight','bids')
   head(weights_bids)
-  
-  N <- 500
-  n <- 100
   
   population <- generate_population(N, weights_bids)
   for(generation in 1:n){
